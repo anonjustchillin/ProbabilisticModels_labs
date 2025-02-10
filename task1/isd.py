@@ -13,14 +13,13 @@ def isd_calc(values, counts, n):
     check_last_val = True
 
     k = round(np.sqrt(n))
-    print(k)
+    print(f"k = {k}")
     h = round((max(values) - min(values))/k, 3)
-    print(h)
+    print(f"h = {h}")
 
     data = np.array([round((values[0] + i * h), 2) for i in range(k+1)])
     if data[-1] < values[-1]:
         check_last_val = False
-    print(data)
 
     n_data = np.array([])
     num = 0
@@ -45,7 +44,6 @@ def isd_calc(values, counts, n):
         num *= 0
         num += saved
         saved *= 0
-    print(n_data)
 
     w_div_h = []
     for i in n_data:
@@ -54,7 +52,7 @@ def isd_calc(values, counts, n):
     table_print(data, n_data, w_div_h, check_last_val)
     plot_isd(data, w_div_h)
     
-    return data, n_data
+    return data, n_data, h
 
 
 def table_print(values, counts, w, check_last_val):

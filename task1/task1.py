@@ -2,6 +2,8 @@ import numpy as np
 from .dsd import dsd_calc
 from .isd import isd_calc
 from .empir import empir_func
+from .mode import mode_dsd, mode_isd
+from .median import median_dsd, median_isd
 
 
 # variant 22nd
@@ -27,7 +29,9 @@ def start():
     for i in counts:
         w.append(i/n)
 
-    dsd_calc(values, counts, w)
-    data, n_data = isd_calc(values, counts, n)
-    empir_func(values, w, data, n_data, n)
+    # dsd_calc(values, counts, w)
+    intervals, n_data, h = isd_calc(values, counts, n)
+    # empir_func(values, w, intervals, n_data, n)
+    mode_dsd(data)
+    mode_isd(intervals, n_data, h)
 
