@@ -1,5 +1,6 @@
 import numpy as np
 from prettytable import PrettyTable
+from .poly_plot import plot_isd
 
 table = PrettyTable()
 
@@ -25,8 +26,7 @@ def isd_calc(values, counts, n):
     num = 0
     saved = 0
     flag = 0
-    count = 0
-    
+
     for i in range(np.size(data)-1):
         for j in range(flag, np.size(values)):
             if check(values[j], data[i], data[i+1]) or j == 0 or j == np.size(values)-1:
@@ -52,7 +52,9 @@ def isd_calc(values, counts, n):
         w_div_h.append(round(i/(n*h), 3))
 
     table_print(data, n_data, w_div_h, check_last_val)
-    #plot(values, w)
+    plot_isd(data, w_div_h)
+    
+    return data, n_data
 
 
 def table_print(values, counts, w, check_last_val):

@@ -1,13 +1,13 @@
 import numpy as np
 from prettytable import PrettyTable
-from .poly_plot import plot
+from .poly_plot import plot_dsd
 
 table = PrettyTable()
 
 
 def dsd_calc(values, counts, w):
     table_print(values, counts, w)
-    plot(values, w)
+    plot_dsd(values, w)
 
 
 def table_print(values, counts, w):
