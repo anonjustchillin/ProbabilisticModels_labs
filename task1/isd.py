@@ -2,8 +2,6 @@ import numpy as np
 from prettytable import PrettyTable
 from .poly_plot import plot_isd
 
-table = PrettyTable()
-
 
 def check(x, num1, num2):
     return (x > num1 and x < num2)
@@ -20,6 +18,7 @@ def isd_calc(values, counts, n):
     data = np.array([round((values[0] + i * h), 2) for i in range(k+1)])
     if data[-1] < values[-1]:
         check_last_val = False
+    print(data)
 
     n_data = np.array([])
     num = 0
@@ -56,6 +55,7 @@ def isd_calc(values, counts, n):
 
 
 def table_print(values, counts, w, check_last_val):
+    table = PrettyTable()
     table.field_names = ["Інтервали", "n*_i", "w*_i / h"]
     for i in range(np.size(counts-1)):
         if i == 0:

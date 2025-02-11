@@ -2,8 +2,6 @@ import numpy as np
 from prettytable import PrettyTable
 from .poly_plot import plot_empir
 
-table = PrettyTable()
-
 
 def empir_func(values, counts, intervals, n_data, n):
     # Функціональний ряд для дискретного
@@ -32,13 +30,21 @@ def empir_func(values, counts, intervals, n_data, n):
     x = np.concatenate(([first_x_value], x_values, [last_x_value]))
     y = np.concatenate(([0], y_values, [1.0]))
 
+    table_print(intervals, y_values_for_interval)
+
     plot_empir(x, y, intervals, y_values_for_interval)
 
     return y_values_for_interval
 
 
 def table_print(x_val, y_val):
+    table = PrettyTable()
     table.field_names = ["x", "F*(x)"]
     for i in range(np.size(y_val)):
-        table.add_row([x_val[i], y_val[i]], divider=True)
+        if i == 0:
+            table.add_row([f"x <= {x_val[i]}", y_val[i]], divider=True)
+        elif i == np.size(y_val)-1:
+            table.add_row([f"x > {x_val[i]}", y_val[i]], divider=True)
+        else:
+            table.add_row([f"{x_val[i]} < x <= {x_val[i+1]}", y_val[i]], divider=True)
     print(table)

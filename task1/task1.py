@@ -1,4 +1,5 @@
 import numpy as np
+from prettytable import PrettyTable
 from .dsd import dsd_calc
 from .isd import isd_calc
 from .empir import empir_func
@@ -13,10 +14,10 @@ data = np.array([12, 15, 7, 19, 15, 27, 22, 4,
                  11, 22, 12, 19, 15, 12, 15, 31])
 
 # data = np.array([0.87, 0.94, 0.99, 0.90, 0.90, 0.87, 0.85, 0.87,
-#                   0.90, 0.94, 0.87, 0.87, 0.82, 0.90, 0.94, 0.90,
-#                   0.85, 0.85, 0.87, 0.94, 0.81, 0.82, 0.87, 0.97,
-#                   0.90, 0.94, 0.85, 0.81, 0.87, 0.85, 0.90, 0.82,
-#                   0.99, 0.90, 0.94, 0.82, 0.97, 0.81, 0.85, 0.87])
+#                     0.90, 0.94, 0.87, 0.87, 0.82, 0.90, 0.94, 0.90,
+#                     0.85, 0.85, 0.87, 0.94, 0.81, 0.82, 0.87, 0.97,
+#                     0.90, 0.94, 0.85, 0.81, 0.87, 0.85, 0.90, 0.82,
+#                     0.99, 0.90, 0.94, 0.82, 0.97, 0.81, 0.85, 0.87])
 
 var_arr = np.sort(data)
 n = np.size(data)
@@ -24,6 +25,11 @@ n = np.size(data)
 
 def start():
     values, counts = np.unique(var_arr, return_counts=True)
+    table = PrettyTable()
+    table.field_names = ["Унікальне значення", "Кількість"]
+    for i in range(np.size(values)):
+        table.add_row([values[i], counts[i]], divider=True)
+    print(table)
 
     w = []
     for i in counts:
