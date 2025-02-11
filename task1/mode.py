@@ -2,9 +2,22 @@ import numpy as np
 import statistics as st
 
 
-def mode_dsd(values):
-    mode = st.mode(values)
-    print(f"Mo* (для дискретного розподілу вибірки) = {mode}")
+def mode_dsd(values, counts):
+    # mode = st.mode(values)
+    # print(f"Mo* (для дискретного розподілу вибірки) = {mode}")
+
+    max_vals = []
+    max_one_val = max(counts)
+    indeces = np.where(counts == max_one_val)[0]
+
+    for i in indeces:
+        max_vals.append(values[i])
+
+    Mo = 0
+    for i in max_vals:
+        Mo += i
+    Mo /= len(max_vals)
+    print(f"Mo* (для дискретного розподілу вибірки) = {Mo}")
 
 
 def mode_isd(intervals, n_data, h):

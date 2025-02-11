@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6a41dda-1b99-4075-81d7-60fd5ec08121" name="Changes" comment="median works">
+    <list default="true" id="b6a41dda-1b99-4075-81d7-60fd5ec08121" name="Changes" comment="added tables for empir">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/dsd.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/dsd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/empir.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/empir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/isd.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/isd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/task1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +81,7 @@
       <workItem from="1739005786746" duration="104000" />
       <workItem from="1739043284106" duration="2069000" />
       <workItem from="1739217660072" duration="2383000" />
-      <workItem from="1739224764772" duration="14170000" />
+      <workItem from="1739224764772" duration="15751000" />
     </task>
     <task id="LOCAL-00001" summary="isd doesn't work oof">
       <option name="closed" value="true" />
@@ -119,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739234196644</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added tables for empir">
+      <option name="closed" value="true" />
+      <created>1739273249530</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739273249530</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,7 +134,8 @@
     <MESSAGE value="isd works yay" />
     <MESSAGE value="mode works" />
     <MESSAGE value="median works" />
-    <option name="LAST_COMMIT_MESSAGE" value="median works" />
+    <MESSAGE value="added tables for empir" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tables for empir" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -27,6 +27,8 @@ def empir_func(values, counts, intervals, n_data, n):
         sum += n_data[i]
         y_values_for_interval.append(sum / n)
 
+    print(y_values_for_interval)
+
     x = np.concatenate(([first_x_value], x_values, [last_x_value]))
     y = np.concatenate(([0], y_values, [1.0]))
 

@@ -25,14 +25,15 @@ def plot_isd(values, w_div_h):
 
 
 def plot_empir(x, y, intervals, y_values_for_interval):
-    plt.step(x, y, where='post', label='F*(x)', color='darkblue')
+    plt.step(x, y, where='post', label='F*(x) (дискрет.)', color='darkblue')
 
     plt.title('Графік емпіричної функції')
     plt.xlabel('x')
     plt.ylabel('F*(x)')
     plt.grid(True)
-    plt.legend()
 
-    plt.plot(intervals, y_values_for_interval,linestyle='--',)
+    plt.plot(intervals, y_values_for_interval, label='F*(x) (інтервал.)', linestyle='--')
+
+    plt.legend()
     plt.scatter(intervals, y_values_for_interval)
     plt.show()
