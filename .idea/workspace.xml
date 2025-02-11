@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6a41dda-1b99-4075-81d7-60fd5ec08121" name="Changes" comment="isd works yay">
+    <list default="true" id="b6a41dda-1b99-4075-81d7-60fd5ec08121" name="Changes" comment="mode works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/isd.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/isd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/empir.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/empir.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task1/median.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/median.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/mode.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/mode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/poly_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/poly_plot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task1/task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1/task1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +85,7 @@
       <workItem from="1739005786746" duration="104000" />
       <workItem from="1739043284106" duration="2069000" />
       <workItem from="1739217660072" duration="2383000" />
-      <workItem from="1739224764772" duration="2417000" />
+      <workItem from="1739224764772" duration="8842000" />
     </task>
     <task id="LOCAL-00001" summary="isd doesn't work oof">
       <option name="closed" value="true" />
@@ -103,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738972752291</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mode works">
+      <option name="closed" value="true" />
+      <created>1739227302030</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739227302030</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,7 +120,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="isd doesn't work oof" />
     <MESSAGE value="isd works yay" />
-    <option name="LAST_COMMIT_MESSAGE" value="isd works yay" />
+    <MESSAGE value="mode works" />
+    <option name="LAST_COMMIT_MESSAGE" value="mode works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -160,8 +169,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DataAnalysis_code$main.coverage" NAME="main Coverage Results" MODIFIED="1739227177096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DataAnalysis_code$main.coverage" NAME="main Coverage Results" MODIFIED="1739234016837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DataAnalysis_code$isd.coverage" NAME="isd Coverage Results" MODIFIED="1738968652000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task1" />
-    <SUITE FILE_PATH="coverage/DataAnalysis_code$task1.coverage" NAME="task1 Coverage Results" MODIFIED="1739227030570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task1" />
+    <SUITE FILE_PATH="coverage/DataAnalysis_code$task1.coverage" NAME="task1 Coverage Results" MODIFIED="1739228669818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task1" />
   </component>
 </project>

@@ -29,9 +29,11 @@ def start():
     for i in counts:
         w.append(i/n)
 
-    # dsd_calc(values, counts, w)
+    dsd_calc(values, counts, w)
     intervals, n_data, h = isd_calc(values, counts, n)
-    # empir_func(values, w, intervals, n_data, n)
+    y_values_for_interval = empir_func(values, counts, intervals, n_data, n)
     mode_dsd(data)
+    median_dsd(values)
     mode_isd(intervals, n_data, h)
+    median_isd(y_values_for_interval, intervals, h)
 
