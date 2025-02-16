@@ -1,3 +1,4 @@
 from task1 import task1
+from lab1 import lab1
 
-task1.start()
+lab1.start()

@@ -4,21 +4,23 @@ from .poly_plot import plot_isd
 
 
 def check(x, num1, num2):
-    return (x > num1 and x < num2)
+    return num1 < x < num2
 
 
-def isd_calc(values, counts, n):
+def isd_calc(values, counts, n, is_lab=False):
     check_last_val = True
 
     k = round(np.sqrt(n))
     print(f"k = {k}")
-    h = round((max(values) - min(values))/k, 3)
+    if is_lab:
+        h = round((max(values) - min(values))/(5*np.log10(n)), 4)
+    else:
+        h = round((max(values) - min(values))/k, 6)
     print(f"h = {h}")
 
-    data = np.array([round((values[0] + i * h), 2) for i in range(k+1)])
+    data = np.array([round((values[0] + i * h), 6) for i in range(k+1)])
     if data[-1] < values[-1]:
         check_last_val = False
-    print(data)
 
     n_data = np.array([])
     num = 0
@@ -46,11 +48,11 @@ def isd_calc(values, counts, n):
 
     w_div_h = []
     for i in n_data:
-        w_div_h.append(round(i/(n*h), 3))
+        w_div_h.append(round(i/(n*h), 6))
 
     table_print(data, n_data, w_div_h, check_last_val)
     plot_isd(data, w_div_h)
-    
+
     return data, n_data, h
 
 
@@ -67,3 +69,4 @@ def table_print(values, counts, w, check_last_val):
         else:
             table.add_row([f"({values[i]}; {values[i+1]})", counts[i], w[i]], divider=True)
     print(table)
+

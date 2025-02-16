@@ -1,5 +1,4 @@
 import numpy as np
-import statistics as st
 
 
 def mode_dsd(values, counts):
@@ -13,11 +12,13 @@ def mode_dsd(values, counts):
     for i in indeces:
         max_vals.append(values[i])
 
-    Mo = 0
-    for i in max_vals:
-        Mo += i
-    Mo /= len(max_vals)
-    print(f"Mo* (для дискретного розподілу вибірки) = {Mo}")
+    #Mo = 0
+    #for i in max_vals:
+    #    Mo += i
+    #Mo /= len(max_vals)
+    #print(f"Mo* (для дискретного розподілу вибірки) = {Mo}")
+
+    print(f"Mo* (для дискретного розподілу вибірки) = {list(map(str, max_vals))}")
 
 
 def mode_isd(intervals, n_data, h):

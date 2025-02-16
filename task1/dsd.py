@@ -3,7 +3,11 @@ from prettytable import PrettyTable
 from .poly_plot import plot_dsd
 
 
-def dsd_calc(values, counts, w):
+def dsd_calc(values, counts, n):
+    w = []
+    for i in counts:
+        w.append(round(i/n, 6))
+
     table_print(values, counts, w)
     plot_dsd(values, w)
 

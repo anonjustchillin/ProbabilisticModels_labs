@@ -38,14 +38,10 @@ def start():
         table.add_row([values[i], counts[i]], divider=True)
     print(table)
 
-    w = []
-    for i in counts:
-        w.append(i/n)
-
-    dsd_calc(values, counts, w)
+    dsd_calc(values, counts, n)
     intervals, n_data, h = isd_calc(values, counts, n)
     y_values_for_interval = empir_func(values, counts, intervals, n_data, n)
-    #mode_dsd(data)
+    mode_dsd(values, counts)
     median_dsd(values)
     mode_isd(intervals, n_data, h)
     median_isd(y_values_for_interval, intervals, h)
