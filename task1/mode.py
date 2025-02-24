@@ -2,9 +2,6 @@ import numpy as np
 
 
 def mode_dsd(values, counts):
-    # mode = st.mode(values)
-    # print(f"Mo* (для дискретного розподілу вибірки) = {mode}")
-
     max_vals = []
     max_one_val = max(counts)
     indeces = np.where(counts == max_one_val)[0]
@@ -22,15 +19,19 @@ def mode_dsd(values, counts):
 
 
 def mode_isd(intervals, n_data, h):
-    max_val = max(n_data)
-    indeces = np.where(n_data == max_val)[0]
+    max_vals = []
+    max_one_val = max(n_data)
+    indeces = np.where(n_data == max_one_val)[0]
 
-    n_Mo = 0
     for i in indeces:
-        n_Mo += n_data[i]
+        max_vals.append(intervals[i])
 
     first_i = indeces[0]
     x_i1 = intervals[first_i]
 
-    mode = x_i1 + h*((max_val - n_data[first_i-1]) / (2*max_val - n_data[first_i-1] - n_data[first_i+1]))
-    print(f"Mo* (для інтегрального розподілу вибірки) = {round(mode, 3)}")
+    mode = []
+    for i in range(np.size(indeces)):
+        mode.append(x_i1 + h*((max_vals[i] - n_data[indeces[i]-1]) / 
+                              (2*max_vals[i] - n_data[indeces[i]-1] - n_data[indeces[i]+1])))
+
+    print(f"Mo* (для інтегрального розподілу вибірки) = {list(map(str, max_vals))}")
